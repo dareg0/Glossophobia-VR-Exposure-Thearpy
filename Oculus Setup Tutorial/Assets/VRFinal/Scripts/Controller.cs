@@ -9,31 +9,43 @@ public class Controller : MonoBehaviour
     public Slider m_PeopleCountSlider;
     public Text outText;
 
-
     private int peopleCount;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void AudienceCount()
+    public void OnSliderChanged()
     {
         this.peopleCount = (int)m_PeopleCountSlider.value;
-    }
-
-    public void OnSliderChanged(float value)
-    {
         if (outText != null)
         {
-            outText.text = "<b>Last Interaction:</b>\nUI Slider value: " + value;
+            outText.text = "UI Slider clicked. Current Audience Count: " + peopleCount;
+        }
+    }
+    public void OnIncreaseButtonClicked()
+    {
+        this.peopleCount += 1;
+        if (outText != null)
+        {
+            outText.text = "UI Button clicked. Current Audience Count + 1: " + peopleCount;
+        }
+    }
+
+    public void OnDecreaseButtonClicked()
+    {
+        this.peopleCount -= 1;
+        if (outText != null)
+        {
+            outText.text = "UI Button clicked. Current Audience Count - 1: " + peopleCount;
         }
     }
 }
