@@ -1,31 +1,12 @@
 ﻿<Properties StartupConfiguration="{B16E7C14-D962-F923-E8A1-14A499E3DB8E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfField.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRFinal/Scripts/Controller.cs">
     <Files>
-      <File FileName="Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfField.cs" Line="9" Column="1" />
+      <File FileName="Assets/VRFinal/Scripts/Controller.cs" Line="2" Column="34" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Oculus Setup Tutorial" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Standard Assets" expanded="True">
-                <Node name="Effects" expanded="True">
-                  <Node name="ImageEffects" expanded="True">
-                    <Node name="Scripts" expanded="True">
-                      <Node name="DepthOfField.cs" selected="True" />
-                    </Node>
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1e243140-c6b5-43cd-9e6f-4e21d7a424ab" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7bf31ac6-5fb2-414e-b6bb-f852fab9d693" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
