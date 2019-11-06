@@ -9,8 +9,12 @@ public class Controller : MonoBehaviour
     public Slider m_PeopleCountSlider;
     public Text outText;
 
-    private int peopleCount;
+    private int AudienceState;
 
+    private void Awake()
+    {
+        AudienceState = 0;  // empty
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -23,29 +27,44 @@ public class Controller : MonoBehaviour
 
     }
 
-    public void OnSliderChanged()
-    {
-        this.peopleCount = (int)m_PeopleCountSlider.value;
-        if (outText != null)
-        {
-            outText.text = "UI Slider clicked. Current Audience Count: " + peopleCount;
-        }
-    }
+    //public void OnSliderChanged()
+    //{
+    //    this.peopleCount = (int)m_PeopleCountSlider.value;
+    //    if (outText != null)
+    //    {
+    //        outText.text = "UI Slider clicked. Current Audience Count: " + peopleCount;
+    //    }
+    //}
     public void OnIncreaseButtonClicked()
     {
-        this.peopleCount += 1;
-        if (outText != null)
-        {
-            outText.text = "UI Button clicked. Current Audience Count + 1: " + peopleCount;
-        }
+        if (AudienceState < 3)
+            this.AudienceState += 1;
+        ChangeText();
     }
 
     public void OnDecreaseButtonClicked()
     {
-        this.peopleCount -= 1;
-        if (outText != null)
+        if (AudienceState > 1)
+            this.AudienceState -= 1;
+        ChangeText();
+    }
+
+    public void ChangeText()
+    {
+        switch (AudienceState)
         {
-            outText.text = "UI Button clicked. Current Audience Count - 1: " + peopleCount;
+            case 1:
+                outText.text = "Low Occupancy";
+                break;
+            case 2:
+                outText.text = "Medium Occupancy";
+                break;
+            case 3:
+                outText.text = "Fully Occupied";
+                break;
+            default:
+                outText.text = "Empty";
+                break;
         }
     }
 }
