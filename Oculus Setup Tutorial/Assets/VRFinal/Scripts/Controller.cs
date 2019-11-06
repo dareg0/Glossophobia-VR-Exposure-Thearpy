@@ -18,9 +18,13 @@ public class Controller : MonoBehaviour
 
     private GameObject currentState;
 
+    private bool scriptEnabled;
+    public GameObject scriptButton;
+
     private void Awake()
     {
         AudienceNum = 0;  // empty
+        scriptEnabled = false;
         currentState = LowOccup;
         currentState.SetActive(false);
     }
@@ -47,9 +51,16 @@ public class Controller : MonoBehaviour
 
     public void ScriptButton()
     {
-        if (outText != null)
+        scriptEnabled = !scriptEnabled;
+
+        if (scriptEnabled)
         {
-            outText.text = "";
+            scriptButton.GetComponentInChildren<Text>().text = "Pause Script";
+            StartCoroutine("TheSequence");
+        }
+        else
+        {
+            scriptButton.GetComponentInChildren<Text>().text = "Resume Script";
         }
     }
 
@@ -91,5 +102,18 @@ public class Controller : MonoBehaviour
                 break;
         }
         currentState.SetActive(true);
+    }
+
+    IEnumerator TheSequence()
+    {
+        yield return new WaitForSeconds(1);
+        outText.text = "Hello my name is Meera";
+        yield return new WaitForSeconds(4);
+        outText.text = "Today I'm going to talk to you about my VR project";
+        yield return new WaitForSeconds(3);
+        outText.text = "My project is about glossophobia, ";
+        yield return new WaitForSeconds(3);
+        outText.text = "which is the fear of public speaking.";
+
     }
 }

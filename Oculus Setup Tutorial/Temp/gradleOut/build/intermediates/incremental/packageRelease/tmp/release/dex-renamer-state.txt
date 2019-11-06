@@ -1,4 +1,4 @@
-#Wed Nov 06 15:40:42 EST 2019
+#Wed Nov 06 16:19:57 EST 2019
 base.0=/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
 path.0=classes.dex
 renamed.0=classes.dex
