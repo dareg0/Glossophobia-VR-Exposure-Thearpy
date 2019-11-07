@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3C36FDA1-6D45-23F3-6B93-661A65E36DBB}</ProjectGuid>
+    <ProjectGuid>{4D34629B-521D-E2AD-F12A-4BD252897274}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -298,31 +298,31 @@
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Oculus Setup Tutorial/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2019.2.6f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -858,15 +858,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{E1C23426-21EA-FDBB-D0C6-C4981939CDF2}</Project>
+      <Project>{0156F18F-49BC-59F5-A9B2-461D0799804B}</Project>
       <Name>Oculus.VR.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{8BDD5E3C-B1CC-7ECE-0A6A-76AF3F4ED926}</Project>
+      <Project>{C7861389-551C-92E5-106A-A4F31C829BF8}</Project>
       <Name>Oculus.VR.Scripts.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{4AB549AF-C739-355B-261C-90D4CBDE984D}</Project>
+      <Project>{8BA59CDE-FF04-92FB-87A0-B3E96E14FCD9}</Project>
       <Name>Oculus.VR</Name>
     </ProjectReference>
   </ItemGroup>
