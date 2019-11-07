@@ -12,6 +12,6 @@
 
 - Zhiling Hu, zh347@cornell.edu, [dareg0](https://github.com/dareg0)
 - Meera Nanda, mn584@cornell.edu, [meerananda](https://github.com/meerananda)
-- [Insert your full name, Cornell email, GitHub handle]
+- Prithvi Sriram, ps976@cornell.edu, [PrithviSriram](https://github.com/PrithviSriram)
 
 
