@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{B16E7C14-D962-F923-E8A1-14A499E3DB8E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRFinal/Scripts/Controller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRFinal/Scripts/Subtitles.cs">
     <Files>
       <File FileName="Assets/VRFinal/Scripts/Controller.cs" Line="48" Column="29" />
+      <File FileName="Assets/VRFinal/Scripts/Subtitles.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3bf33719-3bd4-4194-9bd7-42159def00e7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="25c98dc4-80bb-4d3a-837a-3424e7ff37d6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
