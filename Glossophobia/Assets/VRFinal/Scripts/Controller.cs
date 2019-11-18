@@ -10,9 +10,8 @@ public class Controller : MonoBehaviour
     public GameObject MedOccup;
     public GameObject LowOccup;
     public GameObject EmptyOccup;
-    public GameObject player;
-
-    public Slider m_PeopleCountSlider;
+    public GameObject uicanvas;
+    public Slider noiseslider;
     public Text outText;
 
     private int AudienceNum;
@@ -99,10 +98,15 @@ public class Controller : MonoBehaviour
         timerEnabled = true;
     }
 
-    public void onNextClicked()
+    public void onStartClicked()
     {
-        player.transform.position = new Vector3(0, 0, 0);
+        uicanvas.SetActive(false);
     }
+    public void onSliderChange()
+    {
+
+    }
+
 
     public void ChangeText()
     {
