@@ -24,8 +24,12 @@ public class Controller : MonoBehaviour
     public TextAsset m_subscript_text;
 
     private List<string> textList;
+    public GameObject emoji1;
+    public GameObject emoji2;
+    private bool emojiEnabled;
 
     private int textIndex;
+
     private void Awake()
     {
         AudienceNum = 0;  // empty
@@ -34,6 +38,7 @@ public class Controller : MonoBehaviour
         currentState = LowOccup;
         currentState.SetActive(false);
         textList = new List<string>();
+        emojiEnabled = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -64,11 +69,24 @@ public class Controller : MonoBehaviour
         {
             scriptButton.GetComponentInChildren<Text>().text = "Pause Script";
             //StartCoroutine("TheSequence");
+            StartCoroutine("Emoji");
         }
         else
         {
             scriptButton.GetComponentInChildren<Text>().text = "Resume Script";
         }
+    }
+
+    IEnumerator Emoji()
+    {
+        yield return new WaitForSeconds(5);
+        emoji1.SetActive(true);
+        yield return new WaitForSeconds(1);
+        emoji1.SetActive(false);
+        yield return new WaitForSeconds(5);
+        emoji2.SetActive(true);
+        yield return new WaitForSeconds(1);
+        emoji2.SetActive(false);
     }
 
     public void OnIncreaseButtonClicked()
@@ -111,18 +129,6 @@ public class Controller : MonoBehaviour
         currentState.SetActive(true);
     }
 
-    IEnumerator TheSequence()
-    {
-        yield return new WaitForSeconds(1);
-        outText.text = "The script is about ";
-        yield return new WaitForSeconds(4);
-        outText.text = "Today I'm going to talk to you about my VR project";
-        yield return new WaitForSeconds(3);
-        outText.text = "My project is about glossophobia, ";
-        yield return new WaitForSeconds(3);
-        outText.text = "which is the fear of public speaking.";
-
-    }
 
     void readText(TextAsset txt)
     {
@@ -150,7 +156,7 @@ public class Controller : MonoBehaviour
             if (textList[textIndex] != null)
                 outText.text = textList[textIndex];
         }
-        else if (OVRInput.GetDown(OVRInput.Button.Two))  // A's pressed
+        else if (OVRInput.GetDown(OVRInput.Button.Two))  // B's pressed
         {
             textIndex -= 1;
             if (textList[textIndex] != null)

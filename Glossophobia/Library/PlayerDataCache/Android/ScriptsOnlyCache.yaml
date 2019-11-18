@@ -40,7 +40,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/VRFinal/Scenes/NewGlossophobia.unity:
+    Assets/VRFinal/Scenes/Glossophobia.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -1088,7 +1088,7 @@ ScriptsOnlyBuild:
     className: ONSPReflectionZone
   - hash:
       serializedVersion: 2
-      Hash: ab23f9ad269ee31fa885d4fb7560c1b2
+      Hash: 6ddc5fc329382f0e07d0c3e045e783c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -2450,5 +2450,5 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   platform: 13
   scenePathNames:
-  - Assets/VRFinal/Scenes/NewGlossophobia.unity
+  - Assets/VRFinal/Scenes/Glossophobia.unity
   playerPath: /Users/Zhiling/Desktop/glossophobia.apk
