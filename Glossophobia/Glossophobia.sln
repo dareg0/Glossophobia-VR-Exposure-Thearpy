@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR", "Oculus.VR.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{4D34629B-521D-E2AD-F12A-4BD252897274}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{712C704D-39D8-E8F7-207E-79DF69EA8BFD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{87FEB0BF-BB57-1FFA-C626-C9E7089BC871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{712C704D-39D8-E8F7-207E-79DF69EA8BFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR.Scripts.Editor", "Oculus.VR.Scripts.Editor.csproj", "{C7861389-551C-92E5-106A-A4F31C829BF8}"
 EndProject
@@ -33,14 +33,14 @@ Global
 		{4D34629B-521D-E2AD-F12A-4BD252897274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D34629B-521D-E2AD-F12A-4BD252897274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D34629B-521D-E2AD-F12A-4BD252897274}.Release|Any CPU.Build.0 = Release|Any CPU
-		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87FEB0BF-BB57-1FFA-C626-C9E7089BC871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87FEB0BF-BB57-1FFA-C626-C9E7089BC871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87FEB0BF-BB57-1FFA-C626-C9E7089BC871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87FEB0BF-BB57-1FFA-C626-C9E7089BC871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712C704D-39D8-E8F7-207E-79DF69EA8BFD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C7861389-551C-92E5-106A-A4F31C829BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C7861389-551C-92E5-106A-A4F31C829BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7861389-551C-92E5-106A-A4F31C829BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU

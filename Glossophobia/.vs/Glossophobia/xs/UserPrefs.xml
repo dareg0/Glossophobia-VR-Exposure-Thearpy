@@ -1,14 +1,23 @@
 ﻿<Properties StartupConfiguration="{B420E554-FB07-2020-D4A8-D124AA7918D4}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRFinal/Scripts/Controller.cs">
     <Files>
-      <File FileName="Assets/TimerScript.cs" Line="57" Column="10" />
-      <File FileName="Assets/VRFinal/Scripts/Controller.cs" Line="159" Column="44" />
-      <File FileName="Assets/Oculus/SampleFramework/Editor/OculusSampleFrameworkUtil.cs" Line="34" Column="7" />
+      <File FileName="Assets/TimerScript.cs" Line="59" Column="70" />
+      <File FileName="Assets/VRFinal/Scripts/Controller.cs" Line="24" Column="38" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Glossophobia" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Assembly-CSharp-Editor.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6ce9b541-ddc9-4653-81a3-4bc4da96356b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8ee152ad-b0bc-41f0-82c1-bf81d0d923a0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

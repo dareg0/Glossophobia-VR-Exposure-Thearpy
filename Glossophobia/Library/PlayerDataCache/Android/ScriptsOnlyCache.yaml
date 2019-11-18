@@ -31,6 +31,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.UI.Button
@@ -39,7 +40,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/VRFinal/Scenes/Glossophobia.unity:
+    Assets/VRFinal/Scenes/NewGlossophobia.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -155,6 +156,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 215
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -2447,5 +2450,5 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   platform: 13
   scenePathNames:
-  - Assets/VRFinal/Scenes/Glossophobia.unity
+  - Assets/VRFinal/Scenes/NewGlossophobia.unity
   playerPath: /Users/Zhiling/Desktop/glossophobia.apk
