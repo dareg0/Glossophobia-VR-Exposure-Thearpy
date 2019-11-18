@@ -1086,7 +1086,7 @@ ScriptsOnlyBuild:
     className: ONSPReflectionZone
   - hash:
       serializedVersion: 2
-      Hash: 7ca51078eb88af7994ae903a8d232098
+      Hash: 1697569a2a270144ca38053984050c1b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -2443,4 +2443,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/VRFinal/Scenes/Glossophobia.unity
-  playerPath: /Users/Zhiling/Desktop/testbuild.apk
+  playerPath: /Users/prithvisriram/Documents/GitHub/project-2019-g8/Glossophobia/emoji.apk

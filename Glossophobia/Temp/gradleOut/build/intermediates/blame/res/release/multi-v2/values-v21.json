@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/prithvisriram/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/src/main/res/values-v21/styles.xml",
+                    "source": "/Users/prithvisriram/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/src/main/res/values-v21/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "0",

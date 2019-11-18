@@ -10,6 +10,7 @@ public class Controller : MonoBehaviour
     public GameObject MedOccup;
     public GameObject LowOccup;
     public GameObject EmptyOccup;
+    public GameObject player;
 
     public Slider m_PeopleCountSlider;
     public Text outText;
@@ -21,12 +22,22 @@ public class Controller : MonoBehaviour
     private bool scriptEnabled;
     public GameObject scriptButton;
 
+    public GameObject emoji1;
+    public GameObject emoji2;
+    private bool emojiEnabled;
+    private bool timerEnabled;
+
     private void Awake()
     {
         AudienceNum = 0;  // empty
         scriptEnabled = false;
         currentState = LowOccup;
         currentState.SetActive(false);
+
+        emoji1.SetActive(false);
+        emoji2.SetActive(false);
+        emojiEnabled = false;
+        timerEnabled = false;
     }
     // Start is called before the first frame update
     void Start()
@@ -78,6 +89,21 @@ public class Controller : MonoBehaviour
         ChangeText();
     }
 
+    public void onAudienceEmojiClicked()
+    {
+        emojiEnabled = true;
+    }
+
+    public void onTimerEnabled()
+    {
+        timerEnabled = true;
+    }
+
+    public void onNextClicked()
+    {
+        player.transform.position = new Vector3(0, 0, 0);
+    }
+
     public void ChangeText()
     {
         // disable the current state
@@ -106,14 +132,43 @@ public class Controller : MonoBehaviour
 
     IEnumerator TheSequence()
     {
-        yield return new WaitForSeconds(1);
-        outText.text = "Hello my name is Meera";
-        yield return new WaitForSeconds(4);
-        outText.text = "Today I'm going to talk to you about my VR project";
-        yield return new WaitForSeconds(3);
-        outText.text = "My project is about glossophobia, ";
-        yield return new WaitForSeconds(3);
-        outText.text = "which is the fear of public speaking.";
+        //activate timer
+        if(emojiEnabled == true)
+        {
+            yield return new WaitForSeconds(1);
+            outText.text = "Hello my name is Meera";
+            yield return new WaitForSeconds(4);
+            outText.text = "Today I'm going to talk to you about my VR project";
+            emoji1.SetActive(true);
+            yield return new WaitForSeconds(1);
+            emoji1.SetActive(false);
+            yield return new WaitForSeconds(2);
+            outText.text = "My project is about glossophobia, ";
+            emoji2.SetActive(true);
+            yield return new WaitForSeconds(1);
+            emoji2.SetActive(false);
+            yield return new WaitForSeconds(2);
+            outText.text = "which is the fear of public speaking.";
+
+        }
+        else
+        {
+            yield return new WaitForSeconds(1);
+            outText.text = "Hello my name is Meera";
+            yield return new WaitForSeconds(4);
+            outText.text = "Today I'm going to talk to you about my VR project";
+            emoji1.SetActive(false);
+            yield return new WaitForSeconds(1);
+            emoji1.SetActive(false);
+            yield return new WaitForSeconds(2);
+            outText.text = "My project is about glossophobia, ";
+            emoji2.SetActive(false);
+            yield return new WaitForSeconds(1);
+            emoji2.SetActive(false);
+            yield return new WaitForSeconds(2);
+            outText.text = "which is the fear of public speaking.";
+
+        }
 
     }
 }
