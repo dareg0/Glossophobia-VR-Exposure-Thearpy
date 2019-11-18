@@ -24,7 +24,6 @@ public class TimerScript : MonoBehaviour
     {
         if (!isRunning)
         {
-            Debug.Log("START");
             isRunning = true;
             startTime = Time.time;
         }
@@ -34,7 +33,6 @@ public class TimerScript : MonoBehaviour
     {
         if (isRunning)
         {
-            Debug.Log("STOP");
             isRunning = false;
             stopTime = timerTime;
         }
@@ -42,7 +40,9 @@ public class TimerScript : MonoBehaviour
 
     public void TimerReset()
     {
-        Debug.Log("RESET");
+        isRunning = false;
+        startTime = Time.time;
+        stopTime = 0;
         timerMinutes.text = timerSeconds.text = timerSeconds100.text = "00";
     }
 

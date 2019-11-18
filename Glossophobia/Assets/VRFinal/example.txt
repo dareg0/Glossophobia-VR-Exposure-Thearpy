@@ -1,0 +1,12 @@
+Our project involves tackling an issue which troubles around 10 percent of all Americans - phobias.
+We hope to provide a solution using virtual reality for people with glossophobic disorders rooted in visual stimuli.
+This VR tool will enable users to expose themselves to an auditorium with control over their environment.
+The user will be able to control visual triggers such as the number of people in the audience, the brightness of the lights, etc.
+We also would like the user to have the option to pick up the microphone if they want,
+and have access to subtitles for a speech if they need it to practice.
+We will be using an oculus quest as our tool for this exposure therapy mechanism.
+The initial goal for our project is to target visual senses and to provide an experience
+where people with glossophobia can expose themselves to an auditorium of people,
+however if we have time we will continue to develop the product to get questions from audiences
+and negative reactions from audiences to make the experience more realistic.
+In order to do this we will include headphones built into the oculus as our secondary display for audio.

@@ -8,7 +8,7 @@ ScriptsOnlyBuild:
     - OvrAvatar
     - OvrAvatarLocalDriver
     - OvrAvatarSettings
-    - Subtitles
+    - TimerScript
     Oculus.VR.Editor.dll:
     - OVRConfig
     Oculus.VR.dll:
@@ -31,7 +31,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.UI.Button
@@ -118,29 +117,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11616}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 11926}
+      Script: {instanceID: 11928}
     - Class: 114
-      Script: {instanceID: 11952}
+      Script: {instanceID: 11954}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 11976}
     - Class: 114
-      Script: {instanceID: 11978}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 12322}
+      Script: {instanceID: 12324}
     - Class: 114
-      Script: {instanceID: 12406}
+      Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 12490}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 12600}
+      Script: {instanceID: 12602}
     - Class: 114
-      Script: {instanceID: 12966}
+      Script: {instanceID: 12968}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1086,7 +1085,7 @@ ScriptsOnlyBuild:
     className: ONSPReflectionZone
   - hash:
       serializedVersion: 2
-      Hash: 7ca51078eb88af7994ae903a8d232098
+      Hash: ab23f9ad269ee31fa885d4fb7560c1b2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -1462,6 +1461,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 09d12ba7b0c74a990e0e29aa15d6cc5d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimerScript
   - hash:
       serializedVersion: 2
       Hash: 21ee95b4add1eb6d3d25a1efaa2d13d9
@@ -2443,4 +2448,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/VRFinal/Scenes/Glossophobia.unity
-  playerPath: /Users/Zhiling/Desktop/testbuild.apk
+  playerPath: /Users/Zhiling/Desktop/glossophobia.apk

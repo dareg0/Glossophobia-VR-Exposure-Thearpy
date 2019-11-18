@@ -21,17 +21,24 @@ public class Controller : MonoBehaviour
     private bool scriptEnabled;
     public GameObject scriptButton;
 
+    public TextAsset m_subscript_text;
+
+    private List<string> textList;
+
+    private int textIndex;
     private void Awake()
     {
         AudienceNum = 0;  // empty
+        textIndex = 0;
         scriptEnabled = false;
         currentState = LowOccup;
         currentState.SetActive(false);
+        textList = new List<string>();
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        readText(m_subscript_text);
     }
 
     // Update is called once per frame
@@ -56,7 +63,7 @@ public class Controller : MonoBehaviour
         if (scriptEnabled)
         {
             scriptButton.GetComponentInChildren<Text>().text = "Pause Script";
-            StartCoroutine("TheSequence");
+            //StartCoroutine("TheSequence");
         }
         else
         {
@@ -107,7 +114,7 @@ public class Controller : MonoBehaviour
     IEnumerator TheSequence()
     {
         yield return new WaitForSeconds(1);
-        outText.text = "Hello my name is Meera";
+        outText.text = "The script is about ";
         yield return new WaitForSeconds(4);
         outText.text = "Today I'm going to talk to you about my VR project";
         yield return new WaitForSeconds(3);
@@ -115,5 +122,41 @@ public class Controller : MonoBehaviour
         yield return new WaitForSeconds(3);
         outText.text = "which is the fear of public speaking.";
 
+    }
+
+    void readText(TextAsset txt)
+    {
+        if (txt != null)
+        {
+            var arrayString = txt.text.Split('\n');
+            foreach (var line in arrayString)
+                textList.Add(line);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        scrollScript();
+    }
+
+    void scrollScript()
+    {
+        if (!scriptEnabled || textList == null)
+            return;
+
+        if (OVRInput.GetDown(OVRInput.Button.One))  // A's pressed
+        {
+            textIndex += 1;
+            if (textList[textIndex] != null)
+                outText.text = textList[textIndex];
+        }
+        else if (OVRInput.GetDown(OVRInput.Button.Two))  // A's pressed
+        {
+            textIndex -= 1;
+            if (textList[textIndex] != null)
+                outText.text = textList[textIndex];
+            else
+                outText.text = "[The End]";
+        }
     }
 }
