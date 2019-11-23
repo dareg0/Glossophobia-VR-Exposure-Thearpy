@@ -424,7 +424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9423199}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26865673, y: 1.3059701, z: 2.3926868}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 95906922}
@@ -25123,7 +25123,7 @@ MonoBehaviour:
   MedOccup: {fileID: 672177524}
   LowOccup: {fileID: 184050602}
   EmptyOccup: {fileID: 1504224748}
-  stateText: {fileID: 1427056643}
+  debugText: {fileID: 1427056643}
   scriptButton: {fileID: 1841124456}
   script_file_easy: {fileID: 4900000, guid: 569fba498244f484d8769e0c1e4d96fe, type: 3}
   script_file_med: {fileID: 4900000, guid: a0cee50db04f0426b968652d236c544b, type: 3}

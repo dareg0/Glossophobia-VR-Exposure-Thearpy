@@ -60,7 +60,7 @@ public class Controller : MonoBehaviour
         currAudienceStateObj.SetActive(true);
 
         reactionEnabled = false;
-        records = new List<string[]>();\
+        records = new List<string[]>();
         
     }
     // Start is called before the first frame update
@@ -80,7 +80,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-    //[TODO] should be referenced to a button that toggles the script on and off
+    //[TODO] should be referenced to somewhere on menu that toggles the script on and off
     void ScriptButton()
     {
         scriptEnabled = !scriptEnabled;
@@ -91,7 +91,7 @@ public class Controller : MonoBehaviour
             scriptButton.GetComponentInChildren<Text>().text = "Resume Script";
     }
 
-    //[TODO] should be referenced to a button that toggles the timer on and off
+    //[TODO] should be referenced to somewhere on menu that toggles the timer on and off
     void TimerButton()
     {
         timerEnabled = !timerEnabled;
@@ -102,7 +102,7 @@ public class Controller : MonoBehaviour
             timerObject.SetActive(false);
     }
 
-    //[TODO] should be referenced to a button that toggles the reactions on and off
+    //[TODO] should be referenced to somewhere on menu that toggles the reactions on and off
     void ReactionButton()
     {
         reactionEnabled = !reactionEnabled;
@@ -125,7 +125,7 @@ public class Controller : MonoBehaviour
     //    emoji2.SetActive(false);
     //}
 
-    // [TODO] if menus has a slider to change the value, should put a listener to override the currAudienceStateInt value backend
+    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void OnIncreaseAudienceButtonClicked()
     {
         if (currAudienceStateInt < 3)
@@ -133,6 +133,7 @@ public class Controller : MonoBehaviour
         AudienceStatusText();
     }
 
+    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void OnDecreaseAudienceButtonClicked()
     {
         if (currAudienceStateInt > 0)
@@ -140,7 +141,7 @@ public class Controller : MonoBehaviour
         AudienceStatusText();
     }
 
-
+    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void AudienceStatusText()
     {
         // disable the current state
@@ -167,7 +168,7 @@ public class Controller : MonoBehaviour
         currAudienceStateObj.SetActive(true);
     }
 
-    // [TODO] if menus has a slider to change the value, should put a listener to override the currAudienceStateInt value backend
+    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currScriptStateInt value backend
     public void OnIncreaseDifficultyButtonClicked()
     {
         if (currScriptStateInt < 3)
@@ -175,6 +176,7 @@ public class Controller : MonoBehaviour
         ScriptStatusText();
     }
 
+    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currScriptStateInt value backend
     public void OnDecreaseDifficultyButtonClicked()
     {
         if (currScriptStateInt > 0)
@@ -182,6 +184,7 @@ public class Controller : MonoBehaviour
         ScriptStatusText();
     }
 
+    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currScriptStateInt value backend
     public void ScriptStatusText()
     {
         // disable the current state
@@ -216,7 +219,6 @@ public class Controller : MonoBehaviour
         }
     }
 
-
     void ScrollScript()
     {
         if (!scriptEnabled || scriptList == null)
@@ -246,6 +248,6 @@ public class Controller : MonoBehaviour
         int scriptInt = (scriptEnabled) ? 1 : 0;
         string timeStr = timerObject.GetComponent<TimerScript>().finishedTime();
         // date, selfeval, timer[0, 1], timer time, audience size(0,1,2,3), reactions[0, 1], which subscript [no script, easy, medium, hard]
-        records.Add(new string[] { System.DateTime.Now.ToString(), timerInt.ToString(), timeStr, currAudienceStateInt.ToString(), reactionInt.ToString(), "item 3" });
+        records.Add(new string[] { System.DateTime.Now.ToString(), timerInt.ToString(), timeStr, currAudienceStateInt.ToString(), reactionInt.ToString(), currScriptStateInt.ToString()});
     }
 }
