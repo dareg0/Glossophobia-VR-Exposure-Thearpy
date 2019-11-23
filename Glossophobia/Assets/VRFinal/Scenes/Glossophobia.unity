@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 664ac65b14d8d472580097dd73b75e4c, type: 3}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.16788326, g: 0.21073548, b: 0.28994012, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25123,12 +25123,14 @@ MonoBehaviour:
   MedOccup: {fileID: 672177524}
   LowOccup: {fileID: 184050602}
   EmptyOccup: {fileID: 1504224748}
-  m_PeopleCountSlider: {fileID: 1141790419}
-  outText: {fileID: 1427056643}
+  stateText: {fileID: 1427056643}
   scriptButton: {fileID: 1841124456}
-  m_subscript_text: {fileID: 4900000, guid: 569fba498244f484d8769e0c1e4d96fe, type: 3}
+  script_file_easy: {fileID: 4900000, guid: 569fba498244f484d8769e0c1e4d96fe, type: 3}
+  script_file_med: {fileID: 4900000, guid: a0cee50db04f0426b968652d236c544b, type: 3}
+  script_file_hard: {fileID: 4900000, guid: ca067e5ffbe6c406fa6f7cd55f8dde2a, type: 3}
   emoji1: {fileID: 95906921}
   emoji2: {fileID: 1015137008}
+  timerObject: {fileID: 1577681717}
 --- !u!1 &970637652
 GameObject:
   m_ObjectHideFlags: 0

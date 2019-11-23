@@ -386,11 +386,11 @@
     <Compile Include="Assets\Scripts\SizeUpAnimation.cs" />
     <Compile Include="Assets\Scripts\SparkBehavior.cs" />
     <Compile Include="Assets\Scripts\StartGoldberg.cs" />
-    <Compile Include="Assets\TimerScript.cs" />
     <Compile Include="Assets\VRFinal\Models\Clock\Scripts\Clock.cs" />
     <Compile Include="Assets\VRFinal\Scripts\Controller.cs" />
     <Compile Include="Assets\VRFinal\Scripts\InteractionController.cs" />
     <Compile Include="Assets\VRFinal\Scripts\Subtitles.cs" />
+    <Compile Include="Assets\VRFinal\Scripts\TimerScript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_PC_SingleComponent.shader" />
@@ -426,6 +426,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Oculus\SampleFramework\Core\DebugUI\Fonts\Montserrat\OFL.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBSV2.shader" />
+    <None Include="Assets\VRFinal\MEDIUM_Why-Everyone-Should-Learn-to-Play-an-Instrument-Persuasive.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_SingleComponent.shader" />
@@ -437,6 +438,7 @@
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\ToyCubeWithOutline.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\VRFinal\HARD_Teachers-should-be-paid-more-Persuasive.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

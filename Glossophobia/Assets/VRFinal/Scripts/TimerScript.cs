@@ -60,4 +60,14 @@ public class TimerScript : MonoBehaviour
             timerSeconds100.text = (seconds100Int < 10) ? "0" + seconds100Int : seconds100Int.ToString();
         }
     }
+
+    public string finishedTime()
+    {
+        string timeStr = "";
+        if (!isRunning)
+        {
+            timeStr = timerMinutes.text + ":" + timerSeconds.text + ":" + timerSeconds100.text;
+        }
+        return timeStr;
+    }
 }
