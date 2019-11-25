@@ -41,7 +41,9 @@ public class Controller : MonoBehaviour
     private bool finishedSetup;    // [TODO] when user finishes the setup, should be flagged true
 
     public GameObject timerObject;
-
+    public Dropdown dropdown;
+    public GameObject openmenu;
+    public GameObject initialmenu;
     private void Awake()
     {
         finishedSetup = false;
@@ -51,7 +53,7 @@ public class Controller : MonoBehaviour
         currScriptObj = script_file_easy;   // easy script
         currScriptIndex = 0;                // first line
         scriptEnabled = true;               // script enabled
-        timerEnabled = true;                // timer on
+        timerEnabled = false;                // timer on
 
         scriptList = new List<string>();
 
@@ -77,6 +79,9 @@ public class Controller : MonoBehaviour
             if (currScriptObj != null)
                 parseTextFile(currScriptObj);
             ScrollScript();
+            if (reactionEnabled)
+                randomEmoji();
+
         }
     }
 
@@ -91,26 +96,42 @@ public class Controller : MonoBehaviour
             scriptButton.GetComponentInChildren<Text>().text = "Resume Script";
     }
 
+    //to check
     //[TODO] should be referenced to somewhere on menu that toggles the timer on and off
-    void TimerButton()
+    public void TimerButton(bool enable)
     {
-        timerEnabled = !timerEnabled;
-
-        if (timerEnabled)
+        timerEnabled = enable;
+        if (enable)
             timerObject.SetActive(true);
         else
             timerObject.SetActive(false);
     }
 
+    //to check
     //[TODO] should be referenced to somewhere on menu that toggles the reactions on and off
-    void ReactionButton()
+    public void ReactionButton(bool enable)
     {
-        reactionEnabled = !reactionEnabled;
-
-        if (reactionEnabled)
-        {
+        reactionEnabled = enable;
             // [TODO] generate emojis randomly
+    }
+
+    //to check
+    // [TODO] generate emojis randomly
+    void randomEmoji()
+    {
+        if (OVRInput.GetDown(OVRInput.Button.One))  // A's pressed
+        {
+            if (!emoji1.activeSelf && !emoji2.activeSelf)
+                emoji1.SetActive(true);
+            else if(emoji1.activeSelf && !emoji2.activeSelf)
+                emoji2.SetActive(true);
+            else
+            {
+                emoji1.SetActive(false);
+                emoji2.SetActive(false);
+            }
         }
+        //else if (OVRInput.GetDown(OVRInput.Button.Two))  // B's pressed
     }
 
     //IEnumerator Emoji()
@@ -167,7 +188,7 @@ public class Controller : MonoBehaviour
         }
         currAudienceStateObj.SetActive(true);
     }
-
+/*
     // [TODO] if menus has a slider or something to change the value, should put a listener to override the currScriptStateInt value backend
     public void OnIncreaseDifficultyButtonClicked()
     {
@@ -207,6 +228,45 @@ public class Controller : MonoBehaviour
                 currScriptObj = null;
                 break;
         }
+    }
+*/
+
+    // to check
+    public void Dropdown_select(int index)
+    {
+        if(index == 0)
+        {
+            currScriptObj = null;
+        }
+        else if(index == 1)
+        {
+            currScriptObj = script_file_easy;
+        }
+        else if(index == 2)
+        {
+            currScriptObj = script_file_med;
+        }
+        else
+        {
+            currScriptObj = script_file_hard;
+        }
+    }
+
+    //to check
+    public void on_open_menu()
+    {
+        initialmenu.SetActive(true);
+        openmenu.SetActive(false);
+        scriptButton.SetActive(false);
+    }
+
+    // to check
+    public void on_close_menu()
+    {
+        initialmenu.SetActive(false);
+        openmenu.SetActive(true);
+        scriptButton.SetActive(true);
+        finishedSetup = true;
     }
 
     void parseTextFile(TextAsset txt)

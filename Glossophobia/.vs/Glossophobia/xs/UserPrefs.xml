@@ -1,11 +1,37 @@
 ﻿<Properties StartupConfiguration="{B420E554-FB07-2020-D4A8-D124AA7918D4}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRFinal/Scripts/Controller.cs">
+    <Files>
+      <File FileName="Assets/VRFinal/Scripts/Controller.cs" Line="35" Column="37" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Glossophobia" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Oculus" expanded="True">
+                <Node name="VR" expanded="True">
+                  <Node name="Scripts" expanded="True">
+                    <Node name="Util" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="VRFinal" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="Controller.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Assembly-CSharp-Editor.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="342a6169-d58c-4b7c-afbc-64ad0c2a1997" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="55d03ab3-75c4-4bb1-ab9d-19448607b8b8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
