@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/VRFinal/Scenes/OldGlossophobia.unity
-    guid: 415a7c25d5f704c14bae22c92c22ee01
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/VRFinal/Scenes/Glossophobia.unity
     guid: a02c0bd909df24be2a142522e994cf3f
+  - enabled: 1
+    path: Assets/VRFinal/Scenes/Glossophobia_Meera.unity
+    guid: 67f7a3b5ed798489ca899a0f225928cb
   m_configObjects: {}

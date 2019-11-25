@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Assets\Oculus\VR\Editor\OVRADBTool.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRBuild.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRBundleManager.cs" />
+    <Compile Include="Assets\Oculus\VR\Editor\OVRBundleTool.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRConfig.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRDeviceSelector.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRDirectorySyncer.cs" />

@@ -1,10 +1,21 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioFeedback
     - Clock
     - Controller
+    - Data
+    - HandedInputSelector
+    - HapticFeedback
+    - HistoryTable
+    - LaserPointer
     - ONSPSettings
+    - OVRTouchSample.Hand
+    - OVRTouchSample.HandPose
     - Oculus.Platform.PlatformSettings
+    - OculusSampleFramework.DistanceGrabbable
+    - OculusSampleFramework.DistanceGrabber
+    - OculusSampleFramework.GrabManager
     - OvrAvatar
     - OvrAvatarLocalDriver
     - OvrAvatarSettings
@@ -14,10 +25,8 @@ ScriptsOnlyBuild:
     Oculus.VR.dll:
     - OVRCameraRig
     - OVRDebugInfo
-    - OVRGazePointer
     - OVRHeadsetEmulator
     - OVRManager
-    - OVROverlay
     - OVRPlayerController
     - OVRRaycaster
     - OVRSceneSampleController
@@ -29,18 +38,21 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/VRFinal/Scenes/Glossophobia.unity:
+    Assets/VRFinal/Scenes/Glossophobia_Meera.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -61,13 +73,23 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
+      Script: {instanceID: 0}
+    - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
@@ -83,8 +105,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10018}
     - Class: 114
       Script: {instanceID: 10098}
-    - Class: 114
-      Script: {instanceID: 10152}
     - Class: 114
       Script: {instanceID: 10266}
     - Class: 114
@@ -104,9 +124,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10956}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 10982}
     - Class: 114
-      Script: {instanceID: 11026}
+      Script: {instanceID: 11010}
     - Class: 114
       Script: {instanceID: 11078}
     - Class: 114
@@ -118,9 +138,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11376}
     - Class: 114
+      Script: {instanceID: 11382}
+    - Class: 114
+      Script: {instanceID: 11386}
+    - Class: 114
+      Script: {instanceID: 11480}
+    - Class: 114
+      Script: {instanceID: 11542}
+    - Class: 114
       Script: {instanceID: 11602}
     - Class: 114
       Script: {instanceID: 11616}
+    - Class: 114
+      Script: {instanceID: 11754}
     - Class: 114
       Script: {instanceID: 11876}
     - Class: 114
@@ -132,7 +162,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11980}
     - Class: 114
+      Script: {instanceID: 12250}
+    - Class: 114
       Script: {instanceID: 12324}
+    - Class: 114
+      Script: {instanceID: 12346}
     - Class: 114
       Script: {instanceID: 12408}
     - Class: 114
@@ -140,8 +174,22 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12602}
     - Class: 114
+      Script: {instanceID: 12784}
+    - Class: 114
+      Script: {instanceID: 12920}
+    - Class: 114
       Script: {instanceID: 12968}
+    - Class: 114
+      Script: {instanceID: 107378}
+    - Class: 114
+      Script: {instanceID: 107388}
+    - Class: 114
+      Script: {instanceID: 107404}
+    - Class: 114
+      Script: {instanceID: 107410}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -1088,7 +1136,7 @@ ScriptsOnlyBuild:
     className: ONSPReflectionZone
   - hash:
       serializedVersion: 2
-      Hash: 6ddc5fc329382f0e07d0c3e045e783c7
+      Hash: af97a0e10b314a332b60ebc94b739ce4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller
@@ -2282,7 +2330,7 @@ ScriptsOnlyBuild:
     className: PostEffectsBase
   - hash:
       serializedVersion: 2
-      Hash: 85e8aa29d665952264bc2b39d7dd56b9
+      Hash: 39d80cc683459a8dcad09ae1ca115196
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LaserPointer
@@ -2448,7 +2496,43 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 8c7de270f6c3073f7bff405531c08ad0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioFeedback
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab87fa14ff6bc5662dba821b2c037c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HistoryTable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Data
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HapticFeedback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Oculus.VR.dll
+    namespaceName: 
+    className: OVRResources
+  - hash:
+      serializedVersion: 2
+      Hash: 45f2a4e63a8b43166e3f85c4d543f00d
+    assemblyName: Oculus.VR.dll
+    namespaceName: 
+    className: OVRSceneLoader
   platform: 13
   scenePathNames:
-  - Assets/VRFinal/Scenes/Glossophobia.unity
-  playerPath: /Users/Zhiling/Desktop/glossophobia.apk
+  - Assets/VRFinal/Scenes/Glossophobia_Meera.unity
+  playerPath: /Users/Zhiling/Desktop/glossophobia3.apk

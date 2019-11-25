@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "2,2",
+                        "startOffsets": "53,110",
+                        "endColumns": "56,65",
+                        "endOffsets": "107,173"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,114",
+                        "endColumns": "58,67",
+                        "endOffsets": "109,177"
+                    }
+                },
+                {
+                    "source": "/Users/Zhiling/.gradle/caches/transforms-2/files-2.1/f380d69c7f737c9dba2ba17268da783a/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "2",
+                        "startOffsets": "53",
+                        "endColumns": "41",
+                        "endOffsets": "92"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "182",
+                        "endColumns": "43",
+                        "endOffsets": "221"
+                    }
+                },
+                {
+                    "source": "/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "5,2,7",
+                        "startColumns": "0,0,0",
+                        "startOffsets": "190,53,288",
+                        "endLines": "6,4,10",
+                        "endColumns": "8,8,8",
+                        "endOffsets": "286,188,513"
+                    },
+                    "to": {
+                        "startLines": "5,7,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "226,326,464",
+                        "endLines": "6,9,13",
+                        "endColumns": "8,8,8",
+                        "endOffsets": "321,459,686"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -14,7 +14,7 @@ public class Controller : MonoBehaviour
     // Player records - later parsed int an UI board
     public List<string[]> records;
 
-    public Text debugText;
+    public Text scriptText;
 
     private int currAudienceStateInt;
     private GameObject currAudienceStateObj;    // reference pointer for the current active audience object
@@ -72,16 +72,17 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (finishedSetup)
+        if (currScriptObj != null)
         {
-            if (currScriptObj != null)
-                parseTextFile(currScriptObj);
-            ScrollScript();
+            parseTextFile(currScriptObj);
+            currScriptObj = null;
         }
+            
+        ScrollScript();
     }
 
     //[TODO] should be referenced to somewhere on menu that toggles the script on and off
-    void ScriptButton()
+    public void ScriptButton()
     {
         scriptEnabled = !scriptEnabled;
 
@@ -92,7 +93,7 @@ public class Controller : MonoBehaviour
     }
 
     //[TODO] should be referenced to somewhere on menu that toggles the timer on and off
-    void TimerButton()
+    public void TimerButton()
     {
         timerEnabled = !timerEnabled;
 
@@ -112,18 +113,6 @@ public class Controller : MonoBehaviour
             // [TODO] generate emojis randomly
         }
     }
-
-    //IEnumerator Emoji()
-    //{
-    //    yield return new WaitForSeconds(5);
-    //    emoji1.SetActive(true);
-    //    yield return new WaitForSeconds(1);
-    //    emoji1.SetActive(false);
-    //    yield return new WaitForSeconds(5);
-    //    emoji2.SetActive(true);
-    //    yield return new WaitForSeconds(1);
-    //    emoji2.SetActive(false);
-    //}
 
     // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void OnIncreaseAudienceButtonClicked()
@@ -149,19 +138,19 @@ public class Controller : MonoBehaviour
         switch (currAudienceStateInt)
         {
             case 1:
-                debugText.text = "Low Occupancy";
+                scriptText.text = "Low Occupancy";
                 currAudienceStateObj = LowOccup;
                 break;
             case 2:
-                debugText.text = "Medium Occupancy";
+                scriptText.text = "Medium Occupancy";
                 currAudienceStateObj = MedOccup;
                 break;
             case 3:
-                debugText.text = "Fully Occupied";
+                scriptText.text = "Fully Occupied";
                 currAudienceStateObj = FullyOccup;
                 break;
             case 0:
-                debugText.text = "Empty";
+                scriptText.text = "Empty";
                 currAudienceStateObj = EmptyOccup;
                 break;
         }
@@ -191,19 +180,19 @@ public class Controller : MonoBehaviour
         switch (currScriptStateInt)
         {
             case 1:
-                debugText.text = "Easy Level Script";
+                scriptText.text = "Easy Level Script";
                 currScriptObj = script_file_easy;
                 break;
             case 2:
-                debugText.text = "Mid Level Script";
+                scriptText.text = "Mid Level Script";
                 currScriptObj = script_file_med;
                 break;
             case 3:
-                debugText.text = "Hard Level Script";
+                scriptText.text = "Hard Level Script";
                 currScriptObj = script_file_hard;
                 break;
             case 0:
-                debugText.text = "Empty";
+                scriptText.text = "Empty";
                 currScriptObj = null;
                 break;
         }
@@ -227,17 +216,32 @@ public class Controller : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.One))  // A's pressed
         {
             currScriptIndex += 1;
-            if (scriptList[currScriptIndex] != null)
-                debugText.text = scriptList[currScriptIndex];
+            if (currScriptIndex < scriptList.Count)
+            {
+                if (scriptList[currScriptIndex] != null)
+                    scriptText.text = scriptList[currScriptIndex];
+            }
+            else
+            {
+                scriptText.text = "END";
+                OnSaveRecordMenu();
+            }
         }
         else if (OVRInput.GetDown(OVRInput.Button.Two))  // B's pressed
         {
             currScriptIndex -= 1;
-            if (scriptList[currScriptIndex] != null)
-                debugText.text = scriptList[currScriptIndex];
-            else
-                OnSaveRecordMenu();
+            if(currScriptIndex >= 0 && scriptList[currScriptIndex] != null)
+                scriptText.text = scriptList[currScriptIndex];
         }
+    }
+
+    IEnumerator EndScript()
+    {
+        yield return new WaitForSeconds(5);
+        scriptText.text = "END";
+        scriptEnabled = false;
+        yield return new WaitForSeconds(1);
+        OnSaveRecordMenu();
     }
 
     // [TODO] should be referenced to a button that prmopts to save the current record
@@ -246,9 +250,11 @@ public class Controller : MonoBehaviour
         int timerInt = (timerEnabled) ? 1 : 0;
         int reactionInt = (reactionEnabled) ? 1 : 0;
         int scriptInt = (scriptEnabled) ? 1 : 0;
+        if (scriptEnabled)
+            scriptInt = currScriptStateInt;
         string timeStr = timerObject.GetComponent<TimerScript>().finishedTime();
         // date, selfeval, timer[0, 1], timer time, audience size(0,1,2,3), reactions[0, 1], which subscript [no script, easy, medium, hard]
-        records.Add(new string[] { System.DateTime.Now.ToString(), timerInt.ToString(), timeStr, currAudienceStateInt.ToString(), reactionInt.ToString(), currScriptStateInt.ToString()});
+        records.Add(new string[] { System.DateTime.Now.ToString(), "1", timerInt.ToString(), timeStr, currAudienceStateInt.ToString(), reactionInt.ToString(), scriptInt.ToString()});
         OnCloseRecordMenu();
     }
 
@@ -256,11 +262,13 @@ public class Controller : MonoBehaviour
 
     private void OnSaveRecordMenu()
     {
+        scriptText.text = "SAVE RECORD";
         SaveRecordMenu.SetActive(true);
     }
 
     public void OnCloseRecordMenu()
     {
+        scriptText.text = "CLOSE MENU";
         SaveRecordMenu.SetActive(false);
     }
 }

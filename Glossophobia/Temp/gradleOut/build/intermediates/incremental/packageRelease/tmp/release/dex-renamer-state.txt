@@ -1,0 +1,4 @@
+#Mon Nov 25 15:41:21 EST 2019
+base.0=/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
