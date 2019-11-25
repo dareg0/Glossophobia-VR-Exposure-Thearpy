@@ -236,12 +236,12 @@ public class Controller : MonoBehaviour
             if (scriptList[currScriptIndex] != null)
                 debugText.text = scriptList[currScriptIndex];
             else
-                debugText.text = "[The End]";
+                OnSaveRecordMenu();
         }
     }
 
     // [TODO] should be referenced to a button that prmopts to save the current record
-    void saveRecord()
+    public void OnSaveButton()
     {
         int timerInt = (timerEnabled) ? 1 : 0;
         int reactionInt = (reactionEnabled) ? 1 : 0;
@@ -249,5 +249,18 @@ public class Controller : MonoBehaviour
         string timeStr = timerObject.GetComponent<TimerScript>().finishedTime();
         // date, selfeval, timer[0, 1], timer time, audience size(0,1,2,3), reactions[0, 1], which subscript [no script, easy, medium, hard]
         records.Add(new string[] { System.DateTime.Now.ToString(), timerInt.ToString(), timeStr, currAudienceStateInt.ToString(), reactionInt.ToString(), currScriptStateInt.ToString()});
+        OnCloseRecordMenu();
+    }
+
+    public GameObject SaveRecordMenu;
+
+    private void OnSaveRecordMenu()
+    {
+        SaveRecordMenu.SetActive(true);
+    }
+
+    public void OnCloseRecordMenu()
+    {
+        SaveRecordMenu.SetActive(false);
     }
 }

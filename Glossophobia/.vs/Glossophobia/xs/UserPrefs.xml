@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{B420E554-FB07-2020-D4A8-D124AA7918D4}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRFinal/Scripts/Controller.cs">
+    <Files>
+      <File FileName="Assets/VRFinal/Scripts/Controller.cs" Line="256" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>Assembly-CSharp-Editor.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="342a6169-d58c-4b7c-afbc-64ad0c2a1997" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0e2dde60-d04d-458e-9217-b17481e6043e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
