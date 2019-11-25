@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/VRFinal/Scenes/Glossophobia.unity
+- path: Assets/Oculus/SampleFramework/Usage/Locomotion.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

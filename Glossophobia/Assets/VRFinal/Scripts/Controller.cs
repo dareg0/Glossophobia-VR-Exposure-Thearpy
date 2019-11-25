@@ -128,6 +128,7 @@ public class Controller : MonoBehaviour
     // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void OnIncreaseAudienceButtonClicked()
     {
+        Debug.Log("CLICKED");
         if (currAudienceStateInt < 3)
             this.currAudienceStateInt += 1;
         AudienceStatusText();
