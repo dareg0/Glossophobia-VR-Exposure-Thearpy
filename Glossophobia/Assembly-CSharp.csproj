@@ -388,6 +388,7 @@
     <Compile Include="Assets\Scripts\StartGoldberg.cs" />
     <Compile Include="Assets\VRFinal\Models\Clock\Scripts\Clock.cs" />
     <Compile Include="Assets\VRFinal\Scripts\Controller.cs" />
+    <Compile Include="Assets\VRFinal\Scripts\Controller_Prithvi.cs" />
     <Compile Include="Assets\VRFinal\Scripts\InteractionController.cs" />
     <Compile Include="Assets\VRFinal\Scripts\Subtitles.cs" />
     <Compile Include="Assets\VRFinal\Scripts\TimerScript.cs" />

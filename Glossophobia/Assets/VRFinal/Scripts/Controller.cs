@@ -44,6 +44,10 @@ public class Controller : MonoBehaviour
     public Dropdown dropdown;
     public GameObject openmenu;
     public GameObject initialmenu;
+    private bool usertalking;
+    //private List<Vector3> emojipositions = new List<Vector3>();
+    private List<Vector3> emojipositions = new List<Vector3>();
+
     private void Awake()
     {
         finishedSetup = false;
@@ -63,12 +67,26 @@ public class Controller : MonoBehaviour
 
         reactionEnabled = false;
         records = new List<string[]>();
-        
+        usertalking = false;
     }
     // Start is called before the first frame update
+    //(-3.275,0.24,5.055), (-3.34,1.004,6.068), (-0.887,1.09,6.068), (-0.49,1.09,6.068), (4.13,1.01,6.068), (4.18,0.25,5.059), (3.2,0.29,5.059), (1.47,0.23,5.059), (0.05, 0.32, 5.059), (-3.27, 0.23, 5.059), (-1.35, -0.216, 4.142), (0.062, -0.224, 4.142), (0.995, -0.204, 3.424)
     void Start()
     {
-
+        emojipositions.Add(new Vector3(-3.275f, 0.24f, 5.055f));
+        emojipositions.Add(new Vector3(-3.34f, 1.004f, 6.068f));
+        emojipositions.Add(new Vector3(-0.887f, 1.09f, 6.068f));
+        emojipositions.Add(new Vector3(-0.49f, 1.09f, 6.068f));
+        emojipositions.Add(new Vector3(4.13f, 1.01f, 6.068f));
+        emojipositions.Add(new Vector3(4.18f, 0.25f, 5.059f));
+        emojipositions.Add(new Vector3(3.2f, 0.29f, 5.059f));
+        emojipositions.Add(new Vector3(1.47f, 0.23f, 5.059f));
+        emojipositions.Add(new Vector3(0.05f, 0.32f, 5.059f));
+        emojipositions.Add(new Vector3(-3.27f, 0.23f, 5.059f));
+        emojipositions.Add(new Vector3(-1.35f, -0.216f, 4.142f));
+        emojipositions.Add(new Vector3(0.062f, -0.224f, 4.142f));
+        emojipositions.Add(new Vector3(0.995f, -0.204f, 3.424f));
+        PopulateList();
     }
 
     // Update is called once per frame
@@ -89,7 +107,7 @@ public class Controller : MonoBehaviour
     void ScriptButton()
     {
         scriptEnabled = !scriptEnabled;
-
+        usertalking = !usertalking;
         if (scriptEnabled)
             scriptButton.GetComponentInChildren<Text>().text = "Pause Script";
         else
@@ -116,10 +134,13 @@ public class Controller : MonoBehaviour
     }
 
     //to check
+    // (-3.275,0.24,5.055), (-3.34,1.004,6.068), (-0.887,1.09,6.068), (-0.49,1.09,6.068), (4.13,1.01,6.068), (4.18,0.25,5.059), (3.2,0.29,5.059), (1.47,0.23,5.059), (0.05, 0.32, 5.059), (-3.27, 0.23, 5.059), (-1.35, -0.216, 4.142), (0.062, -0.224, 4.142), (0.995, -0.204, 3.424)
     // [TODO] generate emojis randomly
     void randomEmoji()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One))  // A's pressed
+        StartCoroutine(Emoji());
+
+/*        if (OVRInput.GetDown(OVRInput.Button.One))  // A's pressed
         {
             if (!emoji1.activeSelf && !emoji2.activeSelf)
                 emoji1.SetActive(true);
@@ -132,7 +153,35 @@ public class Controller : MonoBehaviour
             }
         }
         //else if (OVRInput.GetDown(OVRInput.Button.Two))  // B's pressed
+*/
     }
+
+    IEnumerator Emoji()
+    {
+        while(usertalking)
+        {
+            int randomNumber = Random.Range(4, 10);
+            int randomNumber2 = Random.Range(1, 1000);
+            int randomperson = Random.Range(0, 13);
+            yield return new WaitForSeconds(randomNumber);
+            if(randomNumber2 % 2==0)
+            {
+                emoji1.transform.position = emojipositions[randomperson];
+                emoji1.SetActive(true);
+                yield return new WaitForSeconds(1);
+                emoji1.SetActive(false);
+            }
+            else
+            {
+                emoji2.transform.position = emojipositions[randomperson];
+                emoji2.SetActive(true);
+                yield return new WaitForSeconds(1);
+                emoji2.SetActive(false);
+            }
+
+        }
+    }
+
 
     //IEnumerator Emoji()
     //{
@@ -250,6 +299,12 @@ public class Controller : MonoBehaviour
         {
             currScriptObj = script_file_hard;
         }
+    }
+
+    void PopulateList()
+    {
+        List<string> names = new List<string>() { "No Script", "Easy Script", "Medium Script", "Hard Script" };
+        dropdown.AddOptions(names);
     }
 
     //to check

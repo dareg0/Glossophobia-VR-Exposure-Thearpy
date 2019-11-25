@@ -1,8 +1,5 @@
 ﻿<Properties StartupConfiguration="{B420E554-FB07-2020-D4A8-D124AA7918D4}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/VRFinal/Scripts/Controller.cs">
-    <Files>
-      <File FileName="Assets/VRFinal/Scripts/Controller.cs" Line="35" Column="37" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -31,7 +28,7 @@
     <String>Assembly-CSharp-Editor.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="55d03ab3-75c4-4bb1-ab9d-19448607b8b8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="99f46fa3-8aab-4d4a-a52c-abcf3a814317" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
