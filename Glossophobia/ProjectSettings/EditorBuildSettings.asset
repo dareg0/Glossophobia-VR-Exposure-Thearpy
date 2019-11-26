@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/VRFinal/Scenes/Glossophobia.unity
     guid: a02c0bd909df24be2a142522e994cf3f
   - enabled: 1
-    path: Assets/VRFinal/Scenes/Glossophobia_Meera.unity
+    path: Assets/VRFinal/Scenes/GlossophobiaP3.unity
     guid: 67f7a3b5ed798489ca899a0f225928cb
   m_configObjects: {}

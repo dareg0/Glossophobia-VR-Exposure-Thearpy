@@ -14,6 +14,7 @@ public class TimerScript : MonoBehaviour
     private float timerTime;
     private bool isRunning = false;
 
+    private string timeStr;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,30 +27,25 @@ public class TimerScript : MonoBehaviour
             TimerStart();
         else if (!gameState && isRunning)
             TimerStop();
-        //isRunning = gameState;
     }
 
     public void TimerStart()
     {
-        //if (!isRunning)
-        //{
         isRunning = true;
         startTime = Time.time;
-        //}
     }
 
     public void TimerStop()
     {
-        //if (isRunning)
-        //{
         isRunning = false;
         stopTime = timerTime;
-        //}
     }
 
     public void TimerReset()
     {
         isRunning = false;
+
+        timeStr = timerMinutes.text + ":" + timerSeconds.text + ":" + timerSeconds100.text;
         startTime = Time.time;
         stopTime = 0;
         timerMinutes.text = timerSeconds.text = timerSeconds100.text = "00";
@@ -70,13 +66,8 @@ public class TimerScript : MonoBehaviour
         }
     }
 
-    public string finishedTime()
+    public string ElapsedTimeStr()
     {
-        string timeStr = "";
-        if (!isRunning)
-        {
-            timeStr = timerMinutes.text + ":" + timerSeconds.text + ":" + timerSeconds100.text;
-        }
         return timeStr;
     }
 }

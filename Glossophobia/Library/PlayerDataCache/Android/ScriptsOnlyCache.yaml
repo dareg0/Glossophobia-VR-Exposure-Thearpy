@@ -57,7 +57,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/VRFinal/Scenes/Glossophobia_Meera.unity:
+    Assets/VRFinal/Scenes/GlossophobiaP3.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -236,12 +236,6 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: LevelReset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
     className: ONSPVersion
   - hash:
       serializedVersion: 2
@@ -261,12 +255,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneAndURLLoader
   - hash:
       serializedVersion: 2
       Hash: 3748fbad2d474a315bda516b8363a0c5
@@ -507,12 +495,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BoundsLockedObject
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1145,12 +1127,6 @@ ScriptsOnlyBuild:
     className: ThirdPersonCharacter
   - hash:
       serializedVersion: 2
-      Hash: b54f8be68f6e3169d543383799d00e18
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraSwitch
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: Oculus.Platform.Samples.VrHoops
@@ -1371,12 +1347,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
-  - hash:
-      serializedVersion: 2
-      Hash: 296fe27bf6a67ad114f808be4eaa08cc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: ParticleSceneControls
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1721,12 +1691,6 @@ ScriptsOnlyBuild:
     className: Restarter
   - hash:
       serializedVersion: 2
-      Hash: 6044529815c0850359298e2f87d67d0b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: SlowMoButton
-  - hash:
-      serializedVersion: 2
       Hash: 97a580c59cad3623a01bbf5fb2d7fa93
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Water
@@ -2003,12 +1967,6 @@ ScriptsOnlyBuild:
     className: OvrAvatarMaterialManager
   - hash:
       serializedVersion: 2
-      Hash: 02e6483ba585336f78a48b8cf2289aa0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuSceneLoader
-  - hash:
-      serializedVersion: 2
       Hash: aa62db4853c32985c15c64f4bb72c4e3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2043,12 +2001,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnableSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 7e6b022cd7f1c29976ca8b1a21d06265
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: PlaceTargetWithMouse
   - hash:
       serializedVersion: 2
       Hash: dbb1a6051987b4922d94d1caad387b1c
@@ -2549,5 +2501,5 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   platform: 13
   scenePathNames:
-  - Assets/VRFinal/Scenes/Glossophobia_Meera.unity
+  - Assets/VRFinal/Scenes/GlossophobiaP3.unity
   playerPath: /Users/Zhiling/Desktop/glossophobia.apk

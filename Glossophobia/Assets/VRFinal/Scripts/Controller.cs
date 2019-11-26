@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
-
     // Four States Prefab - referenced to predefined gameobjects - will be activated according to user input
     public GameObject FullyOccup;
     public GameObject MedOccup;
@@ -41,7 +40,7 @@ public class Controller : MonoBehaviour
     public GameObject emoji1;
     public GameObject emoji2;
 
-    private bool finishedSetup;    // [TODO] when user finishes the setup, should be flagged true
+    private bool finishedSetup;
 
     public GameObject timerObject;
 
@@ -61,7 +60,7 @@ public class Controller : MonoBehaviour
         // initial states
         currScriptStateInt = 1;             // easy script
         currScriptObj = script_file_easy;   // easy script
-        currScriptIndex = 0;                // first line
+        currScriptIndex = -1;                // default
         scriptEnabled = true;               // script enabled
         timerEnabled = true;                // timer on
 
@@ -101,38 +100,21 @@ public class Controller : MonoBehaviour
     {
         if (isGameOn)
         {
-            //CheckTimer();
             ScriptReady();
 
             if (reactionEnabled)
             {
                 randomEmoji();
-            //    reactionEnabled = false;
             }
-//                randomEmoji();
         }
         else
         {
             if (finishedSetup)
             {
                 parseTextFile(currScriptObj);
-                //if (OVRInput.GetDown(OVRInput.Button.One))
-                //{
-
-                //isGameOn = true;
-                //}
-
             }
         }
     }
-
-    //private void CheckTimer()
-    //{
-    //    if (timerEnabled && finishedSetup)
-    //    {
-    //        timerObject.GetComponent<TimerScript>().SetRunningState(isGameOn);
-    //    }
-    //}
 
     public void ReadyPlayButton()
     {
@@ -140,18 +122,6 @@ public class Controller : MonoBehaviour
         GameStateButton.GetComponentInChildren<Text>().text = "Start Game";
     }
 
-    //public void PauseGameButton()
-    //{
-    //    //scriptText.text = "Start Game";
-    //    //isGameOn = !isGameOn;
-    //    //if (isGameOn)
-    //    //{
-
-    //    //}
-    //    isGameOn = false;
-    //}
-
-    //[TODO] should be referenced to somewhere on menu that toggles the script on and off
     public void GameButton()
     {
         if (!finishedSetup)
@@ -170,10 +140,9 @@ public class Controller : MonoBehaviour
             GameStateButton.GetComponentInChildren<Text>().text = "Resume";
             timerObject.GetComponent<TimerScript>().SetRunningState(isGameOn);
         }
-            
+
     }
 
-    //[TODO] should be referenced to somewhere on menu that toggles the timer on and off
     public void TimerButton(bool enable)
     {
         timerEnabled = enable;
@@ -181,39 +150,22 @@ public class Controller : MonoBehaviour
             timerObject.SetActive(true);
         else
             timerObject.SetActive(false);
-
-        //timerEnabled = !timerEnabled;
-
-        //if (timerEnabled)
-        //    timerObject.SetActive(true);
-        //else
-        //    timerObject.SetActive(false);
     }
 
-    //[TODO] should be referenced to somewhere on menu that toggles the reactions on and off
     public void ReactionButton(bool enabled)
     {
         if (enabled == true)
         {
-            scriptText.text = "emoji enabled";
             reactionEnabled = true;
         }
         else
         {
-            scriptText.text = "emoji disabled";
             reactionEnabled = false;
         }
-        //reactionEnabled = !reactionEnabled;
-
-        //if (reactionEnabled)
-        //{
-        //    // [TODO] generate emojis randomly
-        //}
     }
 
     void randomEmoji()
     {
-        scriptText.text = "random emoji";
         StartCoroutine(Emoji());
     }
 
@@ -226,46 +178,10 @@ public class Controller : MonoBehaviour
             int randomNumber2 = Random.Range(1, 1000);
             int randomperson = Random.Range(0, 13);
             yield return new WaitForSeconds(randomNumber);
-            //yield return new WaitForSeconds(10);
-            scriptText.text = "random numbers generated";
-            /*if (emojichoice == true)
-            {
-                emojichoice = false;
-                emoji1.transform.position = emojipositions[person];
-                if (person != 12)
-                {
-                    person = person + 1;
-                }
-                else
-                {
-                    person = 0;
-                }
-                emoji1.SetActive(true);
-                yield return new WaitForSeconds(1);
-                emoji1.SetActive(false);
-            }
-            else
-            {
-                emojichoice = true;
-                emoji2.transform.position = emojipositions[person];
-                if (person != 12)
-                {
-                    person = person + 1;
-                }
-                else
-                {
-                    person = 0;
-                }
-                emoji2.SetActive(true);
-                yield return new WaitForSeconds(5);
-                emoji2.SetActive(false);
-
-            }*/
             if (randomNumber2 % 2 == 0)
             {
                 emoji1.transform.position = emojipositions[randomperson];
                 emoji1.SetActive(true);
-                scriptText.text = "emoji1 is set active";
                 yield return new WaitForSeconds(1);
                 emoji1.SetActive(false);
             }
@@ -273,15 +189,12 @@ public class Controller : MonoBehaviour
             {
                 emoji2.transform.position = emojipositions[randomperson];
                 emoji2.SetActive(true);
-                scriptText.text = "emoji2 is set active";
                 yield return new WaitForSeconds(1);
                 emoji2.SetActive(false);
             }
         }
     }
 
-
-    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void OnIncreaseAudienceButtonClicked()
     {
         if (currAudienceStateInt < 3)
@@ -289,7 +202,6 @@ public class Controller : MonoBehaviour
         AudienceStatusText();
     }
 
-    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void OnDecreaseAudienceButtonClicked()
     {
         if (currAudienceStateInt > 0)
@@ -297,7 +209,6 @@ public class Controller : MonoBehaviour
         AudienceStatusText();
     }
 
-    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currAudienceStateInt value backend
     public void AudienceStatusText()
     {
         // disable the current state
@@ -324,7 +235,6 @@ public class Controller : MonoBehaviour
         currAudienceStateObj.SetActive(true);
     }
 
-    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currScriptStateInt value backend
     public void OnIncreaseDifficultyButtonClicked()
     {
         if (currScriptStateInt < 3)
@@ -332,7 +242,6 @@ public class Controller : MonoBehaviour
         ScriptStatusText();
     }
 
-    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currScriptStateInt value backend
     public void OnDecreaseDifficultyButtonClicked()
     {
         if (currScriptStateInt > 0)
@@ -340,7 +249,6 @@ public class Controller : MonoBehaviour
         ScriptStatusText();
     }
 
-    // [TODO] if menus has a slider or something to change the value, should put a listener to override the currScriptStateInt value backend
     public void ScriptStatusText()
     {
         // disable the current state
@@ -392,8 +300,7 @@ public class Controller : MonoBehaviour
             }
             else
             {
-                scriptText.text = "END";
-                OnSaveRecordMenu();
+                OnRecordMenu();
             }
         }
         else if (OVRInput.GetDown(OVRInput.Button.Two))  // B's pressed
@@ -404,18 +311,9 @@ public class Controller : MonoBehaviour
         }
     }
 
-    IEnumerator EndScript()
-    {
-        yield return new WaitForSeconds(5);
-        scriptText.text = "END";
-        scriptEnabled = false;
-        yield return new WaitForSeconds(1);
-        OnSaveRecordMenu();
-    }
 
     public void Dropdown_select(int index)
     {
-        //selection = index;
         if (index == 0)
         {
             currScriptObj = null;
@@ -440,31 +338,57 @@ public class Controller : MonoBehaviour
         dropdown.AddOptions(names);
     }
 
-    // [TODO] should be referenced to a button that prmopts to save the current record
-    public void OnSaveButton()
+    public void OnSaveRecordButton()
     {
+        // if the menus it relies on is not active
+        if (!SaveRecordMenu.activeSelf)
+            return;
         int timerInt = (timerEnabled) ? 1 : 0;
         int reactionInt = (reactionEnabled) ? 1 : 0;
         int scriptInt = (scriptEnabled) ? 1 : 0;
         if (scriptEnabled)
             scriptInt = currScriptStateInt;
-        string timeStr = timerObject.GetComponent<TimerScript>().finishedTime();
+        string timeStr = timerObject.GetComponent<TimerScript>().ElapsedTimeStr();
         // date, selfeval, timer[0, 1], timer time, audience size(0,1,2,3), reactions[0, 1], which subscript [no script, easy, medium, hard]
         records.Add(new string[] { System.DateTime.Now.ToString(), "1", timerInt.ToString(), timeStr, currAudienceStateInt.ToString(), reactionInt.ToString(), scriptInt.ToString() });
-        OnCloseRecordMenu();
+
+        UIResatrt();
     }
 
     public GameObject SaveRecordMenu;
 
-    private void OnSaveRecordMenu()
+    private void OnRecordMenu()
     {
-        scriptText.text = "SAVE RECORD";
+        RestartGameLogics();
         SaveRecordMenu.SetActive(true);
     }
 
-    public void OnCloseRecordMenu()
+    private void RestartGameLogics()
     {
-        scriptText.text = "CLOSE MENU";
-        SaveRecordMenu.SetActive(false);
+        isGameOn = false;
+        finishedSetup = false;
+
+        // [TODO] should initial states be last time saved?
+        currScriptStateInt = 1;             // easy script
+        currScriptObj = script_file_easy;   // easy script
+        currScriptIndex = -1;                // default
+        //scriptEnabled = true;               // script enabled
+        //timerEnabled = true;                // timer on
+
+        scriptList = new List<string>();
+
+        //currAudienceStateInt = 1;           // low occupancy
+        //currAudienceStateObj = LowOccup;
+        //currAudienceStateObj.SetActive(true);
+
+        // reset timer
+        timerObject.GetComponent<TimerScript>().TimerReset();
     }
+
+    private void UIResatrt()
+    {
+        GameStateButton.GetComponentInChildren<Text>().text = "Start Game";
+
+    }
+
 }
