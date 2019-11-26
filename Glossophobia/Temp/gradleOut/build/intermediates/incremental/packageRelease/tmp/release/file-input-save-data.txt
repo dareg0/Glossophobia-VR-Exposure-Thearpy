@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Nov 25 15:41:22 EST 2019
+#Tue Nov 26 17:41:14 EST 2019
 2.path=bin/Data/Managed/UnityEngine.SpriteMaskModule.dll
 14.set=ASSET
 107.baseType=DIRECTORY

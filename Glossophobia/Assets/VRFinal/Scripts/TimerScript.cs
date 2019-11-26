@@ -12,7 +12,7 @@ public class TimerScript : MonoBehaviour
     private float startTime;
     private float stopTime;
     private float timerTime;
-    private bool isRunning;
+    private bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,22 +20,31 @@ public class TimerScript : MonoBehaviour
         TimerReset();
     }
 
+    public void SetRunningState(bool gameState)
+    {
+        if (gameState && !isRunning)
+            TimerStart();
+        else if (!gameState && isRunning)
+            TimerStop();
+        //isRunning = gameState;
+    }
+
     public void TimerStart()
     {
-        if (!isRunning)
-        {
-            isRunning = true;
-            startTime = Time.time;
-        }
+        //if (!isRunning)
+        //{
+        isRunning = true;
+        startTime = Time.time;
+        //}
     }
 
     public void TimerStop()
     {
-        if (isRunning)
-        {
-            isRunning = false;
-            stopTime = timerTime;
-        }
+        //if (isRunning)
+        //{
+        isRunning = false;
+        stopTime = timerTime;
+        //}
     }
 
     public void TimerReset()
@@ -55,7 +64,7 @@ public class TimerScript : MonoBehaviour
 
         if (isRunning)
         {
-            timerMinutes.text = (minutesInt < 10) ? "0" + minutesInt: minutesInt.ToString();
+            timerMinutes.text = (minutesInt < 10) ? "0" + minutesInt : minutesInt.ToString();
             timerSeconds.text = (secondsInt < 10) ? "0" + secondsInt : secondsInt.ToString();
             timerSeconds100.text = (seconds100Int < 10) ? "0" + seconds100Int : seconds100Int.ToString();
         }
