@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/VRFinal/Scenes/Glossophobia_Meera.unity
+- path: Assets/VRFinal/Scenes/GlossophobiaP3.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
