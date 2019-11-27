@@ -52,7 +52,14 @@ public class Controller : MonoBehaviour
     private bool emojichoice = true;
     int person = 4;
 
-    private void Awake()
+
+	//[todo]
+	public GameObject emoji3;
+	public int particleCount = 9;
+	public float particleMinSize = 0.4f, particleMaxSize = 0.8f;
+	public GameObject emoji1copy;
+	public GameObject emoji2copy;
+	private void Awake()
     {
         isGameOn = false;
         finishedSetup = false;
@@ -169,6 +176,8 @@ public class Controller : MonoBehaviour
         StartCoroutine(Emoji());
     }
 
+
+    //[todo]
     IEnumerator Emoji()
     {
         while (isGameOn == true)
@@ -178,24 +187,69 @@ public class Controller : MonoBehaviour
             int randomNumber2 = Random.Range(1, 1000);
             int randomperson = Random.Range(0, 13);
             yield return new WaitForSeconds(randomNumber);
-            if (randomNumber2 % 2 == 0)
+            if (randomNumber2 % 3 == 0)
             {
                 emoji1.transform.position = emojipositions[randomperson];
                 emoji1.SetActive(true);
                 yield return new WaitForSeconds(1);
+				Exploding1();
                 emoji1.SetActive(false);
             }
-            else
+            else if(randomNumber2%3 == 1)
             {
                 emoji2.transform.position = emojipositions[randomperson];
                 emoji2.SetActive(true);
                 yield return new WaitForSeconds(1);
+				Exploding2();
                 emoji2.SetActive(false);
+            }
+            else
+			{
+				emoji3.transform.position = emojipositions[randomperson];
+				emoji3.SetActive(true);
+				StartCoroutine(Rotate(1.5f));
+				//yield return new WaitForSeconds(1);
+				emoji3.SetActive(false);
             }
         }
     }
+    //[todo]
+	void Exploding1()
+	{
+		for (int i = 0; i < particleCount; i++)
+		{
+			Instantiate(emoji1copy, emoji1.transform.position, Quaternion.identity);
+			emoji1copy.transform.localScale = emoji1.transform.localScale * Random.Range(particleMinSize, particleMaxSize);
+		}
+	}
 
-    public void OnIncreaseAudienceButtonClicked()
+	//[todo]
+	void Exploding2()
+	{
+		for (int i = 0; i < particleCount; i++)
+		{
+			Instantiate(emoji2copy, emoji2.transform.position, Quaternion.identity);
+			emoji2copy.transform.localScale = emoji2.transform.localScale * Random.Range(particleMinSize, particleMaxSize);
+		}
+	}
+
+	//[todo]
+	IEnumerator Rotate(float duration)
+	{
+		//yield return new WaitForSeconds(5);
+		float startRotation = emoji3.transform.eulerAngles.y;
+		float endRotation = startRotation + 360.0f;
+		float t = 0.0f;
+		while (t < duration)
+		{
+			t += Time.deltaTime;
+			float yRotation = Mathf.Lerp(startRotation, endRotation, t / duration) % 360.0f;
+			emoji3.transform.eulerAngles = new Vector3(emoji3.transform.eulerAngles.x, yRotation, emoji3.transform.eulerAngles.z);
+			yield return null;
+		}
+	}
+
+	public void OnIncreaseAudienceButtonClicked()
     {
         if (currAudienceStateInt < 3)
             this.currAudienceStateInt += 1;
