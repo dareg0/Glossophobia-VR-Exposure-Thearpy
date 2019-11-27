@@ -39,13 +39,13 @@ public class TimerScript : MonoBehaviour
     {
         isRunning = false;
         stopTime = timerTime;
+        timeStr = timerMinutes.text + ":" + timerSeconds.text + ":" + timerSeconds100.text;
     }
 
     public void TimerReset()
     {
         isRunning = false;
 
-        timeStr = timerMinutes.text + ":" + timerSeconds.text + ":" + timerSeconds100.text;
         startTime = Time.time;
         stopTime = 0;
         timerMinutes.text = timerSeconds.text = timerSeconds100.text = "00";
