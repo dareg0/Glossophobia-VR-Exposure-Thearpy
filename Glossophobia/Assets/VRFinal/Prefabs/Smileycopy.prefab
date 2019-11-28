@@ -126,10 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d295d6dd1f104e808b680350fa9c1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startVelocity: {x: 0, y: 10, z: 0}
+  startVelocity: {x: 0, y: 1, z: 0}
   rb: {fileID: 184698752406338453}
   Spark: {fileID: 974410280895300775}
-  delay: 1
+  delay: 0.5
   shrinkSmooth: 5
 --- !u!1 &2738819270998974055
 GameObject:

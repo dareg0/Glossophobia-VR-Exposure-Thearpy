@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
+    public GameObject mic1;
+    public GameObject mic2;
+    public GameObject originalHand;
+
     // Four States Prefab - referenced to predefined gameobjects - will be activated according to user input
     public GameObject FullyOccup;
     public GameObject MedOccup;
@@ -115,6 +119,19 @@ public class Controller : MonoBehaviour
         emojipositions.Add(new Vector3(4.18f, 0.25f, 5.059f));
     }
 
+    private bool micGrabbed = false;
+
+    private void FixedUpdate()
+    {
+        if (!micGrabbed && mic1.GetComponent<OVRGrabbable>().isGrabbed)
+        {
+            micGrabbed = true;
+            mic1.gameObject.SetActive(false);
+            mic2.gameObject.SetActive(true);
+            //originalHand.gameObject.SetActive(false);
+        }
+            
+    }
     // Update is called once per frame
     void Update()
     {
@@ -436,7 +453,7 @@ public class Controller : MonoBehaviour
     {
         timerObject.GetComponent<TimerScript>().TimerStop();
         isGameOn = false;
-
+        StopCoroutine(Emoji());
         EvalWindow.SetActive(true);
 
     }

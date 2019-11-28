@@ -87,11 +87,11 @@
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\Oculus\VR\Editor\network_sec_config.xml" />
     <None Include="Assets\Oculus\VR\Editor\Oculus.VR.Editor.asmdef" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>/Users/Zhiling/Documents/GitHub/project-2019-g8/Glossophobia/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>

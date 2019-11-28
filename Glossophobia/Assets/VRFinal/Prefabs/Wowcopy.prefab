@@ -293,10 +293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d295d6dd1f104e808b680350fa9c1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startVelocity: {x: 0, y: 10, z: 0}
+  startVelocity: {x: 0, y: 1, z: 0}
   rb: {fileID: 1649097898809315976}
   Spark: {fileID: 7416262247034057707}
-  delay: 1
+  delay: 0.5
   shrinkSmooth: 5
 --- !u!54 &1649097898809315976
 Rigidbody:

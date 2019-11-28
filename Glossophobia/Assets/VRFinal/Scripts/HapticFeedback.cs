@@ -73,7 +73,7 @@ public class HapticFeedback : MonoBehaviour
                     else
                     {
                         count--;
-                        Debug.Log("--------------------" + count);
+                        //Debug.Log("--------------------" + count);
                         grow = true;
                     }
                 }
@@ -108,6 +108,7 @@ public class HapticFeedback : MonoBehaviour
 
     public void OnEndButtonClick()
     {
+        StopCoroutine(coroutineBuzz);
         endButton.SetActive(false);
         beginButton.SetActive(true);
         EMDRText.text = "";
