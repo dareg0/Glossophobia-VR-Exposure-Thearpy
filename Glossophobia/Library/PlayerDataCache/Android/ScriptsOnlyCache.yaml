@@ -33,6 +33,8 @@ ScriptsOnlyBuild:
     - OVRScreenFade
     - UnityEngine.EventSystems.OVRInputModule
     - UnityEngine.EventSystems.OVRPhysicsRaycaster
+    Unity.TextMeshPro.Editor.dll:
+    - TMPro.EditorUtilities.TMPro_FontAssetCreatorWindow
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings

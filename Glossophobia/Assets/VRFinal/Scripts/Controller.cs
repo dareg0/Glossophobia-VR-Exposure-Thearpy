@@ -32,7 +32,7 @@ public class Controller : MonoBehaviour
     public Text scriptStatusScript;
     private int currScriptStateInt;
     // Three difficulty levels of script files - referenced to built-in textfiles
-    private TextAsset currScriptObj;    
+    private TextAsset currScriptObj;
     public TextAsset script_file_easy;
     public TextAsset script_file_med;
     public TextAsset script_file_hard;
@@ -97,7 +97,6 @@ public class Controller : MonoBehaviour
     {
 
     }
-    //private void dropdownListener(Dropdown dd) { scriptText.text = dd.value.ToString(); }
 
     void emojiPos()
     {
@@ -353,7 +352,6 @@ public class Controller : MonoBehaviour
                 scriptList.Add(line);
 
             currScriptObj = null;   // clean up the current pointer
-            scriptText.text = scriptList.Count.ToString();
         }
     }
 
@@ -410,13 +408,6 @@ public class Controller : MonoBehaviour
 
     public void OnSaveRecordButton()
     {
-        //if (EvalWindow.activeSelf)
-        //{
-        //    scriptText.text = "active";
-        //    return;
-        //}
-
-        scriptText.text = "SAVE RECORD";
         int timerInt = (timerEnabled) ? 1 : 0;
         string scriptSrt = "0";
         if (scriptEnabled)
@@ -427,8 +418,7 @@ public class Controller : MonoBehaviour
         // date, selfeval, timer[0, 1], timer time, audience size(0,1,2,3), reactions[0, 1], which subscript [no script, easy, medium, hard]
         string[] record = new string[7];
         record[0] = System.DateTime.Now.ToString();
-        int selfeval_int = (int)selfEval;
-        record[1] = "1";
+        record[1] = selfEval.ToString();
         record[2] = timerInt.ToString();
         record[3] = timeStr;
         record[4] = currAudienceStateInt.ToString();
@@ -484,6 +474,5 @@ public class Controller : MonoBehaviour
     {
         if (EvalWindow.activeInHierarchy)
             selfEval = index;
-            
     }
 }

@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HapticFeedback.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
     <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager.cs" />
@@ -391,6 +390,7 @@
     <Compile Include="Assets\VRFinal\Models\Clock\Scripts\Clock.cs" />
     <Compile Include="Assets\VRFinal\Scripts\AudioFeedback.cs" />
     <Compile Include="Assets\VRFinal\Scripts\Controller.cs" />
+    <Compile Include="Assets\VRFinal\Scripts\HapticFeedback.cs" />
     <Compile Include="Assets\VRFinal\Scripts\HistoryTable.cs" />
     <Compile Include="Assets\VRFinal\Scripts\InteractionController.cs" />
     <Compile Include="Assets\VRFinal\Scripts\Subtitles.cs" />
@@ -417,6 +417,7 @@
     <None Include="Assets\Oculus\Avatar\Samples\SocialStarter\README.txt" />
     <None Include="Assets\Oculus\SampleFramework\license.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Glyph Report.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_CombinedMesh.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />

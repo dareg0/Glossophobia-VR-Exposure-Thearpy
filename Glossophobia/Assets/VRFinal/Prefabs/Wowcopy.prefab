@@ -296,8 +296,8 @@ MonoBehaviour:
   startVelocity: {x: 0, y: 10, z: 0}
   rb: {fileID: 1649097898809315976}
   Spark: {fileID: 7416262247034057707}
-  delay: 2
-  shrinkSmooth: 3
+  delay: 1
+  shrinkSmooth: 5
 --- !u!54 &1649097898809315976
 Rigidbody:
   m_ObjectHideFlags: 0

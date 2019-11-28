@@ -13,13 +13,13 @@ public class HistoryTable : MonoBehaviour
     List<Transform> historyEntryTransformList;
 
     public Transform savedData;
-    List<string []> passedEntry;
+    List<string[]> passedEntry;
 
     private void OnEnable()
     {
         entryTemplate.gameObject.SetActive(false);
 
-        passedEntry = new List<string []>();
+        passedEntry = new List<string[]>();
         passedEntry = savedData.GetComponent<Controller>().PlayerRecords;
 
         historyEntryList = new List<HistoryEntry>();
@@ -92,7 +92,7 @@ public class HistoryTable : MonoBehaviour
     void CreateEntry(HistoryEntry newEntry, Transform container, List<Transform> transformList)
     {
         float entrySpace = 150f;
-       
+
         Transform historyEntry = Instantiate(entryTemplate, container);
         RectTransform historyEntryPos = historyEntry.GetComponent<RectTransform>();
         historyEntryPos.anchoredPosition = new Vector2(0, -entrySpace * transformList.Count);

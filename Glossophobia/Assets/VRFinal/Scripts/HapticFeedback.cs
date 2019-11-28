@@ -43,7 +43,8 @@ public class HapticFeedback : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (start == true) {
+        if (start == true)
+        {
             if (count > 0)
             {
                 if (grow)
@@ -92,7 +93,7 @@ public class HapticFeedback : MonoBehaviour
             breathe.text = "";
             breathingSphere.transform.localScale = Vector3.zero;
         }
-        
+
     }
 
     // If Haptic Feedback is started
@@ -119,61 +120,111 @@ public class HapticFeedback : MonoBehaviour
     {
         yield return new WaitForSeconds(32);
         EMDRText.text = "Think about the last time you spoke in front of a group.";
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
 
-            EMDRText.text = "Focus on someone who made you feel comfortable in that situation.";
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
+        EMDRText.text = "Focus on someone who made you feel comfortable in that situation.";
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
 
-            EMDRText.text = "Keep that person in mind as you begin practicing your speech.";
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
-            OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-            yield return new WaitForSeconds(1);
+        EMDRText.text = "What would they say to you to make you feel better right now?";
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
 
-            EMDRText.text = "You're ready to start.";
-        
+        EMDRText.text = "Keep that person in mind as you begin practicing your speech.";
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0.5f, 0.5f, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+        OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+        yield return new WaitForSeconds(1);
+
+        EMDRText.text = "You're ready to start.";
+
 
     }
 }
