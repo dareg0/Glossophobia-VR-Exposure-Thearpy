@@ -41,6 +41,7 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -202,7 +203,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13010}
     - Class: 114
-      Script: {instanceID: 31374}
+      Script: {instanceID: 39204}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -2557,4 +2558,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/VRFinal/Scenes/GlossophobiaP3.unity
-  playerPath: /Users/Zhiling/Desktop/glossophobia.apk
+  playerPath: /Users/meerananda/G08 Glossophobia.apk
